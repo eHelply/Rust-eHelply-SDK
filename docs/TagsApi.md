@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 ## create_tag
 
-> crate::models::TagDb create_tag(tag_base, x_access_token, x_secret_token, authorization, ehelply_active_participant, ehelply_project, ehelply_data)
+> crate::models::TagResponse create_tag(tag_base, x_access_token, x_secret_token, authorization, ehelply_active_participant, ehelply_project, ehelply_data)
 Createtag
 
 Creates a tag
@@ -33,7 +33,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::TagDb**](TagDb.md)
+[**crate::models::TagResponse**](TagResponse.md)
 
 ### Authorization
 
@@ -49,7 +49,7 @@ No authorization required
 
 ## get_tag
 
-> crate::models::TagBase get_tag(tag_uuid, x_access_token, x_secret_token, authorization, ehelply_active_participant, ehelply_project, ehelply_data)
+> crate::models::TagResponse get_tag(tag_uuid, x_access_token, x_secret_token, authorization, ehelply_active_participant, ehelply_project, ehelply_data)
 Gettag
 
 Gets the tag member information given the tag ID
@@ -69,7 +69,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::TagBase**](TagBase.md)
+[**crate::models::TagResponse**](TagResponse.md)
 
 ### Authorization
 
@@ -126,7 +126,7 @@ No authorization required
 
 ## update_tag
 
-> crate::models::TagBase update_tag(tag_uuid, tag_base, x_access_token, x_secret_token, authorization, ehelply_active_participant, ehelply_project, ehelply_data)
+> crate::models::TagResponse update_tag(tag_uuid, tag_base, x_access_token, x_secret_token, authorization, ehelply_active_participant, ehelply_project, ehelply_data)
 Updatetag
 
 Update tag with given info, only updating the fields supplied. Tag Uuid must be sent however.
@@ -147,7 +147,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::TagBase**](TagBase.md)
+[**crate::models::TagResponse**](TagResponse.md)
 
 ### Authorization
 

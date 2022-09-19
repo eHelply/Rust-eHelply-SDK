@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 ## create_staff
 
-> crate::models::StaffDb create_staff(staff_create, x_access_token, x_secret_token, authorization, ehelply_active_participant, ehelply_project, ehelply_data)
+> crate::models::StaffResponse create_staff(staff_base, x_access_token, x_secret_token, authorization, ehelply_active_participant, ehelply_project, ehelply_data)
 Createstaff
 
 Creates a staff member
@@ -24,7 +24,7 @@ Creates a staff member
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-**staff_create** | [**StaffCreate**](StaffCreate.md) |  | [required] |
+**staff_base** | [**StaffBase**](StaffBase.md) |  | [required] |
 **x_access_token** | Option<**String**> |  |  |
 **x_secret_token** | Option<**String**> |  |  |
 **authorization** | Option<**String**> |  |  |
@@ -34,7 +34,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::StaffDb**](StaffDb.md)
+[**crate::models::StaffResponse**](StaffResponse.md)
 
 ### Authorization
 
@@ -177,7 +177,7 @@ No authorization required
 
 ## update_staff
 
-> crate::models::StaffResponse update_staff(staff_uuid, staff_create, x_access_token, x_secret_token, authorization, ehelply_active_participant, ehelply_project, ehelply_data)
+> crate::models::StaffResponse update_staff(staff_uuid, staff_base, x_access_token, x_secret_token, authorization, ehelply_active_participant, ehelply_project, ehelply_data)
 Updatestaff
 
 Update staff with given info, only updating the fields supplied. Staff Uuid must be sent however.
@@ -188,7 +188,7 @@ Update staff with given info, only updating the fields supplied. Staff Uuid must
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
 **staff_uuid** | **String** |  | [required] |
-**staff_create** | [**StaffCreate**](StaffCreate.md) |  | [required] |
+**staff_base** | [**StaffBase**](StaffBase.md) |  | [required] |
 **x_access_token** | Option<**String**> |  |  |
 **x_secret_token** | Option<**String**> |  |  |
 **authorization** | Option<**String**> |  |  |

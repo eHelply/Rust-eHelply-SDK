@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 ## create_category_places_categories_post
 
-> crate::models::CategoryDb create_category_places_categories_post(category_base, x_access_token, x_secret_token, authorization, ehelply_active_participant, ehelply_project, ehelply_data)
+> crate::models::CategoryResponse create_category_places_categories_post(category_base, x_access_token, x_secret_token, authorization, ehelply_active_participant, ehelply_project, ehelply_data)
 Create Category
 
 Creates a category
@@ -34,7 +34,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::CategoryDb**](CategoryDb.md)
+[**crate::models::CategoryResponse**](CategoryResponse.md)
 
 ### Authorization
 
@@ -86,7 +86,7 @@ No authorization required
 
 ## get_category_places_categories_category_uuid_get
 
-> crate::models::CategoryBase get_category_places_categories_category_uuid_get(category_uuid, with_meta, x_access_token, x_secret_token, authorization, ehelply_active_participant, ehelply_project, ehelply_data)
+> crate::models::CategoryResponse get_category_places_categories_category_uuid_get(category_uuid, with_meta, x_access_token, x_secret_token, authorization, ehelply_active_participant, ehelply_project, ehelply_data)
 Get Category
 
 Gets the category information given the category ID
@@ -107,7 +107,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::CategoryBase**](CategoryBase.md)
+[**crate::models::CategoryResponse**](CategoryResponse.md)
 
 ### Authorization
 

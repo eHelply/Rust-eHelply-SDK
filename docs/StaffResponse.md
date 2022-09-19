@@ -4,9 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**uuid** | **String** |  | 
+**entity_uuid** | **String** |  | 
 **project_uuid** | Option<**String**> |  | [optional]
-**entity** | Option<[**serde_json::Value**](.md)> |  | [optional]
+**schedule_uuid** | Option<**String**> |  | [optional]
+**catalog_uuid** | Option<**String**> |  | [optional]
+**review_group_uuid** | Option<**String**> |  | [optional]
+**uuid** | **String** |  | 
+**entity** | Option<**String**> |  | [optional]
 **place** | Option<[**serde_json::Value**](.md)> |  | [optional]
 **place_roles** | Option<**Vec<String>**> |  | [optional]
 **company** | Option<[**serde_json::Value**](.md)> |  | [optional]

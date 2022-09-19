@@ -4,6 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**project_uuid** | Option<**String**> |  | [optional]
 **name** | **String** |  | 
 **summary** | Option<**String**> |  | [optional]
 **public** | Option<**bool**> |  | [optional][default to true]
@@ -12,7 +13,6 @@ Name | Type | Description | Notes
 **contact** | Option<[**crate::models::ContactBase**](ContactBase.md)> |  | [optional]
 **picture** | Option<**String**> |  | [optional]
 **uuid** | **String** |  | 
-**project_uuid** | Option<**String**> |  | [optional]
 **meta_uuid** | Option<**String**> |  | [optional]
 **tags** | Option<[**Vec<crate::models::TagBase>**](TagBase.md)> |  | [optional]
 **categories** | Option<[**Vec<crate::models::CategoryBase>**](CategoryBase.md)> |  | [optional]

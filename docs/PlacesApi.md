@@ -244,7 +244,7 @@ No authorization required
 
 ## search_places
 
-> crate::models::Page search_places(project_uuid, name, address_line_1, address_line_2, city, province_state, country, postal_zip_code, lat, lng, email, is_public, is_deleted, with_company, with_meta, with_catalog, with_reviews, with_schedule, with_collection, with_blog, with_tags, with_categories, page, page_size, sort_on, sort_desc, x_access_token, x_secret_token, authorization, ehelply_active_participant, ehelply_project, ehelply_data)
+> crate::models::Page search_places(name, address_line_1, address_line_2, city, province_state, country, postal_zip_code, lat, lng, email, is_public, is_deleted, with_company, with_meta, with_catalog, with_reviews, with_schedule, with_collection, with_blog, with_tags, with_categories, page, page_size, sort_on, sort_desc, x_access_token, x_secret_token, authorization, ehelply_active_participant, ehelply_project, ehelply_data)
 Searchplaces
 
 Search all places and returns paginated results with Places being stored in items field. Can search by `project_uuid, name, address, address_line_2, city, province_state, country, postal_zip_code, lat, lng email` string fields or the `is_public and is_deleted` boolean fields. To search with these fields use query params with string values. For sorting fill out \"sort_desc\" field with either true/false and the \"sort_on\" query parameter with column you want to sort on (ex: name). Max pagination items per page is 50. Item return format: ``` {     uuid                                **type:** string     project_uuid                        **type:** string or None      meta_uuid                           **type:** string or None      catalog_data                        **type:** dict or None      review_group_data                   **type:** dict or None      schedule_data                       **type:** dict or None      collection_data                     **type:** dict or None      blog_data                           **type:** dict or None      tags                                **type:** [TagBase] or None      categories                          **type:** [CategoryBase] or None      company                             **type:** CompanyBase or None      created_at                          **type:** string or None      updated_at                          **type:** string or None      deleted_at                          **type:** string or None  } ```
@@ -254,7 +254,6 @@ Search all places and returns paginated results with Places being stored in item
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-**project_uuid** | Option<**String**> |  |  |
 **name** | Option<**String**> |  |  |
 **address_line_1** | Option<**String**> |  |  |
 **address_line_2** | Option<**String**> |  |  |

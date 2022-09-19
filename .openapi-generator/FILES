@@ -25,7 +25,7 @@ docs/CatalogReturn.md
 docs/CatalogsApi.md
 docs/CategoryApi.md
 docs/CategoryBase.md
-docs/CategoryDb.md
+docs/CategoryResponse.md
 docs/CompaniesApi.md
 docs/Company.md
 docs/CompanyBase.md
@@ -135,8 +135,7 @@ docs/ServiceCreate.md
 docs/ServiceMessageResponse.md
 docs/ServiceResponse.md
 docs/StaffApi.md
-docs/StaffCreate.md
-docs/StaffDb.md
+docs/StaffBase.md
 docs/StaffResponse.md
 docs/StatsVitalsResponse.md
 docs/StripeAccountResponse.md
@@ -144,7 +143,7 @@ docs/StripeCustomerSecretResponse.md
 docs/SupportApi.md
 docs/TagApi.md
 docs/TagBase.md
-docs/TagDb.md
+docs/TagResponse.md
 docs/TagsApi.md
 docs/Tax.md
 docs/TicketResponse.md
@@ -208,7 +207,7 @@ src/models/basic_meta_create.rs
 src/models/catalog_base.rs
 src/models/catalog_return.rs
 src/models/category_base.rs
-src/models/category_db.rs
+src/models/category_response.rs
 src/models/company.rs
 src/models/company_base.rs
 src/models/company_response.rs
@@ -308,14 +307,13 @@ src/models/selection.rs
 src/models/service_create.rs
 src/models/service_message_response.rs
 src/models/service_response.rs
-src/models/staff_create.rs
-src/models/staff_db.rs
+src/models/staff_base.rs
 src/models/staff_response.rs
 src/models/stats_vitals_response.rs
 src/models/stripe_account_response.rs
 src/models/stripe_customer_secret_response.rs
 src/models/tag_base.rs
-src/models/tag_db.rs
+src/models/tag_response.rs
 src/models/tax.rs
 src/models/ticket_response.rs
 src/models/tickets_response.rs
