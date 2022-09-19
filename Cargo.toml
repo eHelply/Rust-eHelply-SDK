@@ -1,7 +1,9 @@
 [package]
 name = "ehelply"
-version = "1.1.107"
-authors = ["OpenAPI Generator team and contributors"]
+version = "1.1.108"
+authors = ["eHelply Software Inc"]
+description = "eHelply SuperStack SDK"
+license = "Apache-2.0"
 edition = "2018"
 
 [dependencies]
