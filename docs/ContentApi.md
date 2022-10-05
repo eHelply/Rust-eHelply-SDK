@@ -1,13 +1,13 @@
-# \DefaultApi
+# \ContentApi
 
 All URIs are relative to *https://api.prod.ehelply.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**create_file**](DefaultApi.md#create_file) | **POST** /files/files | Createfile
-[**delete_file**](DefaultApi.md#delete_file) | **DELETE** /files/files/{file_uuid} | Deletefile
-[**get_file**](DefaultApi.md#get_file) | **GET** /files/files/{file_uuid} | Getfile
-[**update_file**](DefaultApi.md#update_file) | **PUT** /files/files/{file_uuid} | Updatefile
+[**create_file**](ContentApi.md#create_file) | **POST** /files/files | Createfile
+[**delete_file**](ContentApi.md#delete_file) | **DELETE** /files/files/{file_uuid} | Deletefile
+[**get_file**](ContentApi.md#get_file) | **GET** /files/files/{file_uuid} | Getfile
+[**update_file**](ContentApi.md#update_file) | **PUT** /files/files/{file_uuid} | Updatefile
 
 
 

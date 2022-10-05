@@ -34,6 +34,7 @@ docs/Contact.md
 docs/ContactBase.md
 docs/ContactMethod.md
 docs/ContactResponse.md
+docs/ContentApi.md
 docs/CreateFile200Response.md
 docs/CreateKeyResponse.md
 docs/CreateProjectCredential.md
@@ -44,7 +45,6 @@ docs/CreateTicket.md
 docs/Credential.md
 docs/CustomList.md
 docs/DatesMeta.md
-docs/DefaultApi.md
 docs/DeleteFile200Response.md
 docs/Detailed.md
 docs/DetailedMeta.md
@@ -178,7 +178,7 @@ src/apis/catalogs_api.rs
 src/apis/category_api.rs
 src/apis/companies_api.rs
 src/apis/configuration.rs
-src/apis/default_api.rs
+src/apis/content_api.rs
 src/apis/logging_api.rs
 src/apis/meta_api.rs
 src/apis/mod.rs
