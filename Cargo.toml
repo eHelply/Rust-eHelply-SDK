@@ -1,6 +1,6 @@
 [package]
 name = "ehelply"
-version = "1.1.109"
+version = "1.1.110"
 authors = ["eHelply Software Inc"]
 description = "eHelply SuperStack SDK"
 license = "Apache-2.0"

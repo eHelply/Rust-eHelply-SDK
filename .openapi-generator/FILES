@@ -34,6 +34,7 @@ docs/Contact.md
 docs/ContactBase.md
 docs/ContactMethod.md
 docs/ContactResponse.md
+docs/CreateFile200Response.md
 docs/CreateKeyResponse.md
 docs/CreateProjectCredential.md
 docs/CreateProjectCredit.md
@@ -43,6 +44,8 @@ docs/CreateTicket.md
 docs/Credential.md
 docs/CustomList.md
 docs/DatesMeta.md
+docs/DefaultApi.md
+docs/DeleteFile200Response.md
 docs/Detailed.md
 docs/DetailedMeta.md
 docs/DetailedMetaCreate.md
@@ -149,6 +152,7 @@ docs/TagsApi.md
 docs/Tax.md
 docs/TicketResponse.md
 docs/TicketsResponse.md
+docs/UpdateFile200Response.md
 docs/UpdateProjectCredentialRequest.md
 docs/UpdateReview.md
 docs/User.md
@@ -174,6 +178,7 @@ src/apis/catalogs_api.rs
 src/apis/category_api.rs
 src/apis/companies_api.rs
 src/apis/configuration.rs
+src/apis/default_api.rs
 src/apis/logging_api.rs
 src/apis/meta_api.rs
 src/apis/mod.rs
@@ -216,6 +221,7 @@ src/models/contact.rs
 src/models/contact_base.rs
 src/models/contact_method.rs
 src/models/contact_response.rs
+src/models/create_file_200_response.rs
 src/models/create_key_response.rs
 src/models/create_project_credential.rs
 src/models/create_project_credit.rs
@@ -225,6 +231,7 @@ src/models/create_ticket.rs
 src/models/credential.rs
 src/models/custom_list.rs
 src/models/dates_meta.rs
+src/models/delete_file_200_response.rs
 src/models/detailed.rs
 src/models/detailed_meta.rs
 src/models/detailed_meta_create.rs
@@ -319,6 +326,7 @@ src/models/tag_db.rs
 src/models/tax.rs
 src/models/ticket_response.rs
 src/models/tickets_response.rs
+src/models/update_file_200_response.rs
 src/models/update_project_credential_request.rs
 src/models/update_review.rs
 src/models/user.rs

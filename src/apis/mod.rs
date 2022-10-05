@@ -66,6 +66,7 @@ pub mod billing_api;
 pub mod catalogs_api;
 pub mod category_api;
 pub mod companies_api;
+pub mod default_api;
 pub mod logging_api;
 pub mod meta_api;
 pub mod monitor_api;
