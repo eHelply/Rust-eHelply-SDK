@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **basic** | Option<[**crate::models::Basic**](Basic.md)> |  | [optional]
 **detailed** | Option<[**crate::models::Detailed**](Detailed.md)> |  | [optional]
-**custom** | Option<[**serde_json::Value**](.md)> |  | [optional][default to {}]
+**custom** | Option<[**serde_json::Value**](.md)> |  | [optional]
 **dates** | Option<[**crate::models::Dates**](Dates.md)> |  | [optional]
 **fields** | Option<[**Vec<crate::models::Field>**](Field.md)> |  | [optional]
 **children** | Option<[**Vec<serde_json::Value>**](serde_json::Value.md)> |  | [optional]
