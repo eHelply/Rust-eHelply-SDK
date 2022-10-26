@@ -4,17 +4,17 @@ All URIs are relative to *https://api.prod.ehelply.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**create_note**](NotesApi.md#create_note) | **POST** /notes/notes | Create Note
-[**delete_note**](NotesApi.md#delete_note) | **DELETE** /notes/notes/{note_id} | Delete Note
-[**get_note**](NotesApi.md#get_note) | **GET** /notes/notes/{note_id} | Get Note
-[**update_note**](NotesApi.md#update_note) | **PUT** /notes/notes/{note_id} | Update Note
+[**create_note**](NotesApi.md#create_note) | **POST** /notes/notes | Createnote
+[**delete_note**](NotesApi.md#delete_note) | **DELETE** /notes/notes/{note_id} | Deletenote
+[**get_note**](NotesApi.md#get_note) | **GET** /notes/notes/{note_id} | Getnote
+[**update_note**](NotesApi.md#update_note) | **PUT** /notes/notes/{note_id} | Updatenote
 
 
 
 ## create_note
 
-> crate::models::NoteDynamoResponse create_note(note_base, x_access_token, x_secret_token, authorization, ehelply_active_participant, ehelply_project, ehelply_data)
-Create Note
+> crate::models::CreateNote200Response create_note(note_base, x_access_token, x_secret_token, authorization, ehelply_active_participant, ehelply_project, ehelply_data)
+Createnote
 
 ### Parameters
 
@@ -31,7 +31,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::NoteDynamoResponse**](NoteDynamoResponse.md)
+[**crate::models::CreateNote200Response**](createNote_200_response.md)
 
 ### Authorization
 
@@ -47,8 +47,8 @@ No authorization required
 
 ## delete_note
 
-> serde_json::Value delete_note(note_id, method, x_access_token, x_secret_token, authorization, ehelply_active_participant, ehelply_project, ehelply_data)
-Delete Note
+> crate::models::DeleteNote200Response delete_note(note_id, method, x_access_token, x_secret_token, authorization, ehelply_active_participant, ehelply_project, ehelply_data)
+Deletenote
 
 ### Parameters
 
@@ -66,7 +66,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**serde_json::Value**](serde_json::Value.md)
+[**crate::models::DeleteNote200Response**](deleteNote_200_response.md)
 
 ### Authorization
 
@@ -83,7 +83,7 @@ No authorization required
 ## get_note
 
 > crate::models::NoteDynamoHistoryResponse get_note(note_id, history, history_content, x_access_token, x_secret_token, authorization, ehelply_active_participant, ehelply_project, ehelply_data)
-Get Note
+Getnote
 
 ### Parameters
 
@@ -118,8 +118,8 @@ No authorization required
 
 ## update_note
 
-> crate::models::NoteDynamoResponse update_note(note_id, note_base, x_access_token, x_secret_token, authorization, ehelply_active_participant, ehelply_project, ehelply_data)
-Update Note
+> crate::models::UpdateNote200Response update_note(note_id, note_base, x_access_token, x_secret_token, authorization, ehelply_active_participant, ehelply_project, ehelply_data)
+Updatenote
 
 ### Parameters
 
@@ -137,7 +137,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::NoteDynamoResponse**](NoteDynamoResponse.md)
+[**crate::models::UpdateNote200Response**](updateNote_200_response.md)
 
 ### Authorization
 

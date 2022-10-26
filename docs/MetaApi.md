@@ -4,60 +4,22 @@ All URIs are relative to *https://api.prod.ehelply.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**create_field**](MetaApi.md#create_field) | **POST** /meta/field | Create Field
-[**create_meta**](MetaApi.md#create_meta) | **POST** /meta/meta/service/{service}/type/{type_str}/entity/{entity_uuid} | Create Meta
-[**delete_field**](MetaApi.md#delete_field) | **DELETE** /meta/field/{field_uuid} | Delete Field
-[**delete_meta**](MetaApi.md#delete_meta) | **DELETE** /meta/meta/service/{service}/type/{type_str}/entity/{entity_uuid} | Delete Meta
-[**delete_meta_from_uuid**](MetaApi.md#delete_meta_from_uuid) | **DELETE** /meta/meta/{meta_uuid} | Delete Meta From Uuid
-[**get_field**](MetaApi.md#get_field) | **GET** /meta/field/{field_uuid} | Get Field
-[**get_meta**](MetaApi.md#get_meta) | **GET** /meta/meta/service/{service}/type/{type_str}/entity/{entity_uuid} | Get Meta
-[**get_meta_from_uuid**](MetaApi.md#get_meta_from_uuid) | **GET** /meta/meta/{meta_uuid} | Get Meta From Uuid
-[**make_slug**](MetaApi.md#make_slug) | **POST** /meta/meta/slug | Make Slug
-[**touch_meta**](MetaApi.md#touch_meta) | **POST** /meta/meta/service/{service}/type/{type_str}/entity/{entity_uuid}/touch | Touch Meta
-[**update_field**](MetaApi.md#update_field) | **PUT** /meta/field/{field_uuid} | Update Field
-[**update_meta**](MetaApi.md#update_meta) | **PUT** /meta/meta/service/{service}/type/{type_str}/entity/{entity_uuid} | Update Meta
-[**update_meta_from_uuid**](MetaApi.md#update_meta_from_uuid) | **PUT** /meta/meta/{meta_uuid} | Update Meta From Uuid
+[**create_meta**](MetaApi.md#create_meta) | **POST** /meta/meta/service/{service}/type/{type_name}/entity/{entity_uuid} | Createmeta
+[**create_slug**](MetaApi.md#create_slug) | **POST** /meta/slug | Createslug
+[**delete_meta**](MetaApi.md#delete_meta) | **DELETE** /meta/meta/{meta_uuid} | Deletemeta
+[**delete_meta_from_parts**](MetaApi.md#delete_meta_from_parts) | **DELETE** /meta/meta/service/{service}/type/{type_name}/entity/{entity_uuid} | Deletemetafromparts
+[**get_meta**](MetaApi.md#get_meta) | **GET** /meta/meta/{meta_uuid} | Getmeta
+[**get_meta_from_parts**](MetaApi.md#get_meta_from_parts) | **GET** /meta/meta/service/{service}/type/{type_name}/entity/{entity_uuid} | Getmetafromparts
+[**touch_meta**](MetaApi.md#touch_meta) | **POST** /meta/meta/{meta_uuid}/touch | Touchmeta
+[**update_meta**](MetaApi.md#update_meta) | **PUT** /meta/meta/{meta_uuid} | Updatemeta
+[**update_meta_from_parts**](MetaApi.md#update_meta_from_parts) | **PUT** /meta/meta/service/{service}/type/{type_name}/entity/{entity_uuid} | Updatemetafromparts
 
-
-
-## create_field
-
-> crate::models::FieldDynamo create_field(field, x_access_token, x_secret_token, authorization, ehelply_active_participant, ehelply_project, ehelply_data)
-Create Field
-
-### Parameters
-
-
-Name | Type | Description  | Required | Notes
-------------- | ------------- | ------------- | ------------- | -------------
-**field** | [**Field**](Field.md) |  | [required] |
-**x_access_token** | Option<**String**> |  |  |
-**x_secret_token** | Option<**String**> |  |  |
-**authorization** | Option<**String**> |  |  |
-**ehelply_active_participant** | Option<**String**> |  |  |
-**ehelply_project** | Option<**String**> |  |  |
-**ehelply_data** | Option<**String**> |  |  |
-
-### Return type
-
-[**crate::models::FieldDynamo**](FieldDynamo.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: application/json
-- **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
 ## create_meta
 
-> crate::models::MetaDynamo create_meta(service, type_str, entity_uuid, meta_create, x_access_token, x_secret_token, authorization, ehelply_active_participant, ehelply_project, ehelply_data)
-Create Meta
+> crate::models::CreateMeta200Response create_meta(service, type_name, entity_uuid, meta_create, x_access_token, x_secret_token, authorization, ehelply_active_participant, ehelply_project, ehelply_data)
+Createmeta
 
 ### Parameters
 
@@ -65,7 +27,7 @@ Create Meta
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
 **service** | **String** |  | [required] |
-**type_str** | **String** |  | [required] |
+**type_name** | **String** |  | [required] |
 **entity_uuid** | **String** |  | [required] |
 **meta_create** | [**MetaCreate**](MetaCreate.md) |  | [required] |
 **x_access_token** | Option<**String**> |  |  |
@@ -77,7 +39,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::MetaDynamo**](MetaDynamo.md)
+[**crate::models::CreateMeta200Response**](createMeta_200_response.md)
 
 ### Authorization
 
@@ -91,18 +53,17 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## delete_field
+## create_slug
 
-> serde_json::Value delete_field(field_uuid, soft_delete, x_access_token, x_secret_token, authorization, ehelply_active_participant, ehelply_project, ehelply_data)
-Delete Field
+> crate::models::CreateSlug200Response create_slug(slugger, x_access_token, x_secret_token, authorization, ehelply_active_participant, ehelply_project, ehelply_data)
+Createslug
 
 ### Parameters
 
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-**field_uuid** | **String** |  | [required] |
-**soft_delete** | Option<**bool**> |  |  |[default to true]
+**slugger** | [**Slugger**](Slugger.md) |  | [required] |
 **x_access_token** | Option<**String**> |  |  |
 **x_secret_token** | Option<**String**> |  |  |
 **authorization** | Option<**String**> |  |  |
@@ -112,7 +73,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**serde_json::Value**](serde_json::Value.md)
+[**crate::models::CreateSlug200Response**](createSlug_200_response.md)
 
 ### Authorization
 
@@ -120,7 +81,7 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
+- **Content-Type**: application/json
 - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -128,44 +89,8 @@ No authorization required
 
 ## delete_meta
 
-> serde_json::Value delete_meta(service, type_str, entity_uuid, x_access_token, x_secret_token, authorization, ehelply_active_participant, ehelply_project, ehelply_data)
-Delete Meta
-
-### Parameters
-
-
-Name | Type | Description  | Required | Notes
-------------- | ------------- | ------------- | ------------- | -------------
-**service** | **String** |  | [required] |
-**type_str** | **String** |  | [required] |
-**entity_uuid** | **String** |  | [required] |
-**x_access_token** | Option<**String**> |  |  |
-**x_secret_token** | Option<**String**> |  |  |
-**authorization** | Option<**String**> |  |  |
-**ehelply_active_participant** | Option<**String**> |  |  |
-**ehelply_project** | Option<**String**> |  |  |
-**ehelply_data** | Option<**String**> |  |  |
-
-### Return type
-
-[**serde_json::Value**](serde_json::Value.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-## delete_meta_from_uuid
-
-> serde_json::Value delete_meta_from_uuid(meta_uuid, x_access_token, x_secret_token, authorization, ehelply_active_participant, ehelply_project, ehelply_data)
-Delete Meta From Uuid
+> crate::models::DeleteMeta200Response delete_meta(meta_uuid, x_access_token, x_secret_token, authorization, ehelply_active_participant, ehelply_project, ehelply_data)
+Deletemeta
 
 ### Parameters
 
@@ -182,7 +107,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**serde_json::Value**](serde_json::Value.md)
+[**crate::models::DeleteMeta200Response**](deleteMeta_200_response.md)
 
 ### Authorization
 
@@ -196,17 +121,19 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## get_field
+## delete_meta_from_parts
 
-> crate::models::FieldDynamo get_field(field_uuid, x_access_token, x_secret_token, authorization, ehelply_active_participant, ehelply_project, ehelply_data)
-Get Field
+> crate::models::DeleteMeta200Response delete_meta_from_parts(service, type_name, entity_uuid, x_access_token, x_secret_token, authorization, ehelply_active_participant, ehelply_project, ehelply_data)
+Deletemetafromparts
 
 ### Parameters
 
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-**field_uuid** | **String** |  | [required] |
+**service** | **String** |  | [required] |
+**type_name** | **String** |  | [required] |
+**entity_uuid** | **String** |  | [required] |
 **x_access_token** | Option<**String**> |  |  |
 **x_secret_token** | Option<**String**> |  |  |
 **authorization** | Option<**String**> |  |  |
@@ -216,7 +143,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::FieldDynamo**](FieldDynamo.md)
+[**crate::models::DeleteMeta200Response**](deleteMeta_200_response.md)
 
 ### Authorization
 
@@ -232,48 +159,8 @@ No authorization required
 
 ## get_meta
 
-> crate::models::MetaGet get_meta(service, type_str, entity_uuid, detailed, custom, dates, history, x_access_token, x_secret_token, authorization, ehelply_active_participant, ehelply_project, ehelply_data)
-Get Meta
-
-### Parameters
-
-
-Name | Type | Description  | Required | Notes
-------------- | ------------- | ------------- | ------------- | -------------
-**service** | **String** |  | [required] |
-**type_str** | **String** |  | [required] |
-**entity_uuid** | **String** |  | [required] |
-**detailed** | Option<**bool**> |  |  |[default to false]
-**custom** | Option<**bool**> |  |  |[default to false]
-**dates** | Option<**bool**> |  |  |[default to false]
-**history** | Option<**i32**> |  |  |[default to 0]
-**x_access_token** | Option<**String**> |  |  |
-**x_secret_token** | Option<**String**> |  |  |
-**authorization** | Option<**String**> |  |  |
-**ehelply_active_participant** | Option<**String**> |  |  |
-**ehelply_project** | Option<**String**> |  |  |
-**ehelply_data** | Option<**String**> |  |  |
-
-### Return type
-
-[**crate::models::MetaGet**](MetaGet.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-## get_meta_from_uuid
-
-> crate::models::MetaGet get_meta_from_uuid(meta_uuid, detailed, custom, dates, history, x_access_token, x_secret_token, authorization, ehelply_active_participant, ehelply_project, ehelply_data)
-Get Meta From Uuid
+> crate::models::MetaDynamo get_meta(meta_uuid, detailed, custom, history, x_access_token, x_secret_token, authorization, ehelply_active_participant, ehelply_project, ehelply_data)
+Getmeta
 
 ### Parameters
 
@@ -283,7 +170,6 @@ Name | Type | Description  | Required | Notes
 **meta_uuid** | **String** |  | [required] |
 **detailed** | Option<**bool**> |  |  |[default to false]
 **custom** | Option<**bool**> |  |  |[default to false]
-**dates** | Option<**bool**> |  |  |[default to false]
 **history** | Option<**i32**> |  |  |[default to 0]
 **x_access_token** | Option<**String**> |  |  |
 **x_secret_token** | Option<**String**> |  |  |
@@ -294,7 +180,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::MetaGet**](MetaGet.md)
+[**crate::models::MetaDynamo**](MetaDynamo.md)
 
 ### Authorization
 
@@ -308,21 +194,32 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## make_slug
+## get_meta_from_parts
 
-> serde_json::Value make_slug(meta_slugger)
-Make Slug
+> crate::models::MetaDynamo get_meta_from_parts(service, type_name, entity_uuid, detailed, custom, history, x_access_token, x_secret_token, authorization, ehelply_active_participant, ehelply_project, ehelply_data)
+Getmetafromparts
 
 ### Parameters
 
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-**meta_slugger** | [**MetaSlugger**](MetaSlugger.md) |  | [required] |
+**service** | **String** |  | [required] |
+**type_name** | **String** |  | [required] |
+**entity_uuid** | **String** |  | [required] |
+**detailed** | Option<**bool**> |  |  |[default to false]
+**custom** | Option<**bool**> |  |  |[default to false]
+**history** | Option<**i32**> |  |  |[default to 0]
+**x_access_token** | Option<**String**> |  |  |
+**x_secret_token** | Option<**String**> |  |  |
+**authorization** | Option<**String**> |  |  |
+**ehelply_active_participant** | Option<**String**> |  |  |
+**ehelply_project** | Option<**String**> |  |  |
+**ehelply_data** | Option<**String**> |  |  |
 
 ### Return type
 
-[**serde_json::Value**](serde_json::Value.md)
+[**crate::models::MetaDynamo**](MetaDynamo.md)
 
 ### Authorization
 
@@ -330,7 +227,7 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
+- **Content-Type**: Not defined
 - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -338,17 +235,15 @@ No authorization required
 
 ## touch_meta
 
-> crate::models::MetaDynamo touch_meta(service, type_str, entity_uuid, x_access_token, x_secret_token, authorization, ehelply_active_participant, ehelply_project, ehelply_data)
-Touch Meta
+> crate::models::TouchMeta200Response touch_meta(meta_uuid, x_access_token, x_secret_token, authorization, ehelply_active_participant, ehelply_project, ehelply_data)
+Touchmeta
 
 ### Parameters
 
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-**service** | **String** |  | [required] |
-**type_str** | **String** |  | [required] |
-**entity_uuid** | **String** |  | [required] |
+**meta_uuid** | **String** |  | [required] |
 **x_access_token** | Option<**String**> |  |  |
 **x_secret_token** | Option<**String**> |  |  |
 **authorization** | Option<**String**> |  |  |
@@ -358,7 +253,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::MetaDynamo**](MetaDynamo.md)
+[**crate::models::TouchMeta200Response**](touchMeta_200_response.md)
 
 ### Authorization
 
@@ -372,82 +267,10 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## update_field
-
-> serde_json::Value update_field(field_uuid, field, x_access_token, x_secret_token, authorization, ehelply_active_participant, ehelply_project, ehelply_data)
-Update Field
-
-### Parameters
-
-
-Name | Type | Description  | Required | Notes
-------------- | ------------- | ------------- | ------------- | -------------
-**field_uuid** | **String** |  | [required] |
-**field** | [**Field**](Field.md) |  | [required] |
-**x_access_token** | Option<**String**> |  |  |
-**x_secret_token** | Option<**String**> |  |  |
-**authorization** | Option<**String**> |  |  |
-**ehelply_active_participant** | Option<**String**> |  |  |
-**ehelply_project** | Option<**String**> |  |  |
-**ehelply_data** | Option<**String**> |  |  |
-
-### Return type
-
-[**serde_json::Value**](serde_json::Value.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: application/json
-- **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
 ## update_meta
 
-> crate::models::MetaDynamo update_meta(service, type_str, entity_uuid, meta_create, x_access_token, x_secret_token, authorization, ehelply_active_participant, ehelply_project, ehelply_data)
-Update Meta
-
-### Parameters
-
-
-Name | Type | Description  | Required | Notes
-------------- | ------------- | ------------- | ------------- | -------------
-**service** | **String** |  | [required] |
-**type_str** | **String** |  | [required] |
-**entity_uuid** | **String** |  | [required] |
-**meta_create** | [**MetaCreate**](MetaCreate.md) |  | [required] |
-**x_access_token** | Option<**String**> |  |  |
-**x_secret_token** | Option<**String**> |  |  |
-**authorization** | Option<**String**> |  |  |
-**ehelply_active_participant** | Option<**String**> |  |  |
-**ehelply_project** | Option<**String**> |  |  |
-**ehelply_data** | Option<**String**> |  |  |
-
-### Return type
-
-[**crate::models::MetaDynamo**](MetaDynamo.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: application/json
-- **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-## update_meta_from_uuid
-
-> crate::models::MetaDynamo update_meta_from_uuid(meta_uuid, meta_create, x_access_token, x_secret_token, authorization, ehelply_active_participant, ehelply_project, ehelply_data)
-Update Meta From Uuid
+> crate::models::UpdateMeta200Response update_meta(meta_uuid, meta_create, x_access_token, x_secret_token, authorization, ehelply_active_participant, ehelply_project, ehelply_data)
+Updatemeta
 
 ### Parameters
 
@@ -465,7 +288,44 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::MetaDynamo**](MetaDynamo.md)
+[**crate::models::UpdateMeta200Response**](updateMeta_200_response.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## update_meta_from_parts
+
+> crate::models::UpdateMeta200Response update_meta_from_parts(service, type_name, entity_uuid, meta_create, x_access_token, x_secret_token, authorization, ehelply_active_participant, ehelply_project, ehelply_data)
+Updatemetafromparts
+
+### Parameters
+
+
+Name | Type | Description  | Required | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+**service** | **String** |  | [required] |
+**type_name** | **String** |  | [required] |
+**entity_uuid** | **String** |  | [required] |
+**meta_create** | [**MetaCreate**](MetaCreate.md) |  | [required] |
+**x_access_token** | Option<**String**> |  |  |
+**x_secret_token** | Option<**String**> |  |  |
+**authorization** | Option<**String**> |  |  |
+**ehelply_active_participant** | Option<**String**> |  |  |
+**ehelply_project** | Option<**String**> |  |  |
+**ehelply_data** | Option<**String**> |  |  |
+
+### Return type
+
+[**crate::models::UpdateMeta200Response**](updateMeta_200_response.md)
 
 ### Authorization
 
