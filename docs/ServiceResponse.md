@@ -16,6 +16,7 @@ Name | Type | Description | Notes
 **hidden_stages** | Option<**Vec<String>**> |  | [optional][default to []]
 **created_at** | Option<**String**> |  | [optional]
 **updated_at** | Option<**String**> |  | [optional]
+**superstack_meta** | Option<[**crate::models::ServiceSuperStackMeta**](ServiceSuperStackMeta.md)> |  | [optional]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
