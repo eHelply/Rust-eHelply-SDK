@@ -142,6 +142,12 @@ docs/Selection.md
 docs/ServiceCreate.md
 docs/ServiceMessageResponse.md
 docs/ServiceResponse.md
+docs/ServiceSuperStackMeta.md
+docs/ServiceSuperStackMetaFaq.md
+docs/ServiceSuperStackMetaFeature.md
+docs/ServiceSuperStackMetaGettingStarted.md
+docs/ServiceSuperStackMetaGettingStartedEndpointTeaser.md
+docs/ServiceSuperStackMetaUseCase.md
 docs/Slugger.md
 docs/StaffApi.md
 docs/StaffCreate.md
@@ -330,6 +336,12 @@ src/models/selection.rs
 src/models/service_create.rs
 src/models/service_message_response.rs
 src/models/service_response.rs
+src/models/service_super_stack_meta.rs
+src/models/service_super_stack_meta_faq.rs
+src/models/service_super_stack_meta_feature.rs
+src/models/service_super_stack_meta_getting_started.rs
+src/models/service_super_stack_meta_getting_started_endpoint_teaser.rs
+src/models/service_super_stack_meta_use_case.rs
 src/models/slugger.rs
 src/models/staff_create.rs
 src/models/staff_db.rs
