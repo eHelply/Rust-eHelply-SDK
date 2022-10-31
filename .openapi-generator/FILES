@@ -49,6 +49,7 @@ docs/CreateTicket.md
 docs/Credential.md
 docs/CustomList.md
 docs/DatesMeta.md
+docs/DeleteFact200Response.md
 docs/DeleteField200Response.md
 docs/DeleteFile200Response.md
 docs/DeleteMeta200Response.md
@@ -58,6 +59,9 @@ docs/DetailedMeta.md
 docs/DetailedMetaCreate.md
 docs/Discount.md
 docs/Email.md
+docs/Fact.md
+docs/FactCreate.md
+docs/FactsApi.md
 docs/Field.md
 docs/FieldDynamo.md
 docs/FieldsApi.md
@@ -131,6 +135,7 @@ docs/ResponseRemovememberfromproject.md
 docs/ResponseRevokeprojectcredit.md
 docs/ResponseUpdateprojectcredential.md
 docs/ReviewsApi.md
+docs/SaveFact200Response.md
 docs/SecurityApi.md
 docs/SecurityCreateToken.md
 docs/SecurityEncryptionKeyGet.md
@@ -194,6 +199,7 @@ src/apis/category_api.rs
 src/apis/companies_api.rs
 src/apis/configuration.rs
 src/apis/content_api.rs
+src/apis/facts_api.rs
 src/apis/fields_api.rs
 src/apis/logging_api.rs
 src/apis/meta_api.rs
@@ -251,6 +257,7 @@ src/models/create_ticket.rs
 src/models/credential.rs
 src/models/custom_list.rs
 src/models/dates_meta.rs
+src/models/delete_fact_200_response.rs
 src/models/delete_field_200_response.rs
 src/models/delete_file_200_response.rs
 src/models/delete_meta_200_response.rs
@@ -260,6 +267,8 @@ src/models/detailed_meta.rs
 src/models/detailed_meta_create.rs
 src/models/discount.rs
 src/models/email.rs
+src/models/fact.rs
+src/models/fact_create.rs
 src/models/field.rs
 src/models/field_dynamo.rs
 src/models/get_appointment_403_response.rs
@@ -325,6 +334,7 @@ src/models/response_generatetoken.rs
 src/models/response_removememberfromproject.rs
 src/models/response_revokeprojectcredit.rs
 src/models/response_updateprojectcredential.rs
+src/models/save_fact_200_response.rs
 src/models/security_create_token.rs
 src/models/security_encryption_key_get.rs
 src/models/security_encryption_key_response.rs
