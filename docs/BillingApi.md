@@ -4,19 +4,19 @@ All URIs are relative to *https://api.prod.ehelply.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**create_billing_account**](BillingApi.md#create_billing_account) | **POST** /sam/billing/create_billing_account | Createbillingaccount
-[**get_client_secret**](BillingApi.md#get_client_secret) | **GET** /sam/billing/retrieve_secret | Getclientsecret
-[**has_payment**](BillingApi.md#has_payment) | **GET** /sam/billing/has_payment | Haspayment
-[**list_payment_methods**](BillingApi.md#list_payment_methods) | **GET** /sam/billing/view_payment_method | Listpaymentmethods
-[**process_payment**](BillingApi.md#process_payment) | **POST** /sam/billing/process_payment | Processpayment
-[**reconcile_payment_method**](BillingApi.md#reconcile_payment_method) | **GET** /sam/billing/reconcile_payment | Reconcilepaymentmethod
-[**remove_payment_method**](BillingApi.md#remove_payment_method) | **DELETE** /sam/billing/remove_payment_method | Removepaymentmethod
+[**create_billing_account**](BillingApi.md#create_billing_account) | **POST** /sam/billing/projects/{project_uuid}/accounts | Createbillingaccount
+[**get_client_secret**](BillingApi.md#get_client_secret) | **GET** /sam/billing/projects/{project_uuid}/secrets | Getclientsecret
+[**has_payment**](BillingApi.md#has_payment) | **GET** /sam/billing/projects/{project_uuid}/payment-methods-exist | Haspayment
+[**list_payment_methods**](BillingApi.md#list_payment_methods) | **GET** /sam/billing/projects/{project_uuid}/payment-methods | Listpaymentmethods
+[**process_payment**](BillingApi.md#process_payment) | **POST** /sam/billing/projects/{project_uuid}/payments | Processpayment
+[**reconcile_payment_method**](BillingApi.md#reconcile_payment_method) | **GET** /sam/billing/projects/{project_uuid}/payment-methods-reconciliation | Reconcilepaymentmethod
+[**remove_payment_method**](BillingApi.md#remove_payment_method) | **DELETE** /sam/billing/projects/{project_uuid}/payment-methods | Removepaymentmethod
 
 
 
 ## create_billing_account
 
-> crate::models::StripeAccountResponse create_billing_account(x_access_token, x_secret_token, authorization, ehelply_active_participant, ehelply_project, ehelply_data)
+> crate::models::StripeAccountResponse create_billing_account(project_uuid, x_access_token, x_secret_token, authorization, ehelply_active_participant, ehelply_project, ehelply_data)
 Createbillingaccount
 
 ### Parameters
@@ -24,6 +24,7 @@ Createbillingaccount
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
+**project_uuid** | **String** |  | [required] |
 **x_access_token** | Option<**String**> |  |  |
 **x_secret_token** | Option<**String**> |  |  |
 **authorization** | Option<**String**> |  |  |
@@ -49,7 +50,7 @@ No authorization required
 
 ## get_client_secret
 
-> crate::models::StripeCustomerSecretResponse get_client_secret(x_access_token, x_secret_token, authorization, ehelply_active_participant, ehelply_project, ehelply_data)
+> crate::models::StripeCustomerSecretResponse get_client_secret(project_uuid, x_access_token, x_secret_token, authorization, ehelply_active_participant, ehelply_project, ehelply_data)
 Getclientsecret
 
 ### Parameters
@@ -57,6 +58,7 @@ Getclientsecret
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
+**project_uuid** | **String** |  | [required] |
 **x_access_token** | Option<**String**> |  |  |
 **x_secret_token** | Option<**String**> |  |  |
 **authorization** | Option<**String**> |  |  |
@@ -90,7 +92,7 @@ Haspayment
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-**project_uuid** | Option<[**serde_json::Value**](.md)> |  |  |
+**project_uuid** | **String** |  | [required] |
 **x_access_token** | Option<**String**> |  |  |
 **x_secret_token** | Option<**String**> |  |  |
 **authorization** | Option<**String**> |  |  |
@@ -124,7 +126,7 @@ Listpaymentmethods
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-**project_uuid** | Option<[**serde_json::Value**](.md)> |  |  |
+**project_uuid** | **String** |  | [required] |
 **x_access_token** | Option<**String**> |  |  |
 **x_secret_token** | Option<**String**> |  |  |
 **authorization** | Option<**String**> |  |  |
@@ -150,7 +152,7 @@ No authorization required
 
 ## process_payment
 
-> String process_payment(payment, x_access_token, x_secret_token, authorization, ehelply_active_participant, ehelply_project, ehelply_data)
+> String process_payment(project_uuid, payment, x_access_token, x_secret_token, authorization, ehelply_active_participant, ehelply_project, ehelply_data)
 Processpayment
 
 ### Parameters
@@ -158,6 +160,7 @@ Processpayment
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
+**project_uuid** | **String** |  | [required] |
 **payment** | [**Payment**](Payment.md) |  | [required] |
 **x_access_token** | Option<**String**> |  |  |
 **x_secret_token** | Option<**String**> |  |  |
@@ -184,7 +187,7 @@ No authorization required
 
 ## reconcile_payment_method
 
-> bool reconcile_payment_method(x_access_token, x_secret_token, authorization, ehelply_active_participant, ehelply_project, ehelply_data)
+> bool reconcile_payment_method(project_uuid, x_access_token, x_secret_token, authorization, ehelply_active_participant, ehelply_project, ehelply_data)
 Reconcilepaymentmethod
 
 ### Parameters
@@ -192,6 +195,7 @@ Reconcilepaymentmethod
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
+**project_uuid** | **String** |  | [required] |
 **x_access_token** | Option<**String**> |  |  |
 **x_secret_token** | Option<**String**> |  |  |
 **authorization** | Option<**String**> |  |  |
@@ -225,7 +229,7 @@ Removepaymentmethod
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-**project_uuid** | Option<[**serde_json::Value**](.md)> |  |  |
+**project_uuid** | **String** |  | [required] |
 **x_access_token** | Option<**String**> |  |  |
 **x_secret_token** | Option<**String**> |  |  |
 **authorization** | Option<**String**> |  |  |
