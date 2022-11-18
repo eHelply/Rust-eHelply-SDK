@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 ## create_note
 
-> crate::models::CreateNote200Response create_note(note_base, x_access_token, x_secret_token, authorization, ehelply_active_participant, ehelply_project, ehelply_data)
+> crate::models::CreateNoteResponse create_note(note_base, x_access_token, x_secret_token, authorization, ehelply_active_participant, ehelply_project, ehelply_data)
 Createnote
 
 ### Parameters
@@ -31,7 +31,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::CreateNote200Response**](createNote_200_response.md)
+[**crate::models::CreateNoteResponse**](CreateNoteResponse.md)
 
 ### Authorization
 

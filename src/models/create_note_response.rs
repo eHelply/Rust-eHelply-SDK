@@ -12,15 +12,15 @@
 
 
 #[derive(Clone, Debug, PartialEq, Default, Serialize, Deserialize)]
-pub struct UpdateNote200Response {
-    #[serde(rename = "message", skip_serializing_if = "Option::is_none")]
-    pub message: Option<String>,
+pub struct CreateNoteResponse {
+    #[serde(rename = "uuid")]
+    pub uuid: String,
 }
 
-impl UpdateNote200Response {
-    pub fn new() -> UpdateNote200Response {
-        UpdateNote200Response {
-            message: None,
+impl CreateNoteResponse {
+    pub fn new(uuid: String) -> CreateNoteResponse {
+        CreateNoteResponse {
+            uuid,
         }
     }
 }
