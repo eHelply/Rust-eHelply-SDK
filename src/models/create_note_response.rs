@@ -12,18 +12,15 @@
 
 
 #[derive(Clone, Debug, PartialEq, Default, Serialize, Deserialize)]
-pub struct AlarmNote {
-    #[serde(rename = "author_uuid")]
-    pub author_uuid: String,
-    #[serde(rename = "message")]
-    pub message: String,
+pub struct CreateNoteResponse {
+    #[serde(rename = "uuid")]
+    pub uuid: String,
 }
 
-impl AlarmNote {
-    pub fn new(author_uuid: String, message: String) -> AlarmNote {
-        AlarmNote {
-            author_uuid,
-            message,
+impl CreateNoteResponse {
+    pub fn new(uuid: String) -> CreateNoteResponse {
+        CreateNoteResponse {
+            uuid,
         }
     }
 }
